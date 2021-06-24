@@ -12,7 +12,7 @@ after_success:
   - docker build -t ovidiuvlad09/multi-server ./server
   - docker build -t ovidiuvlad09/multi-worker ./worker
   # imagini ce le punem pe docker hub
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # imagini ce le luam si pe da PUSH pe DOCKER HUB
   - docker push ovidiuvlad09/multi-client
   - docker push ovidiuvlad09/multi-nginx
