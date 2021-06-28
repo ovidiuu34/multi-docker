@@ -19,13 +19,7 @@ after_success:
   - docker push ovidiuvlad09/multi-server
   - docker push ovidiuvlad09/multi-worker
 
-deploy:
-  provider: elasticbeanstalk
-  region: 'us-east-2'
-  app: 'multi-docker'
-  env: 'MultiDocker-env'
-  bucket_name: 'elasticbeanstalk-us-east-2-343813294505'
-  bucket_path: 'docker-multi'
+deploy: 'docker-multi'
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
